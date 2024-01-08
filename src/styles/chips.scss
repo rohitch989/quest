@@ -1,0 +1,120 @@
+.chips {
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    font-size: 0.875rem;
+
+    &.secondary {
+        border: 1px solid $secondary-color;
+        background: $secondary-color;
+        color: $white;
+
+        &[disablehover=false] {
+
+            &:focus,
+            &:active,
+            &:hover {
+                border-color: $secondary-color;
+                background: $white;
+                color: $secondary-color;
+            }
+
+            &.outline {
+                border-color: $secondary-color;
+                background: $white;
+                color: $secondary-color;
+            }
+        }
+    }
+
+    &.primary {
+        border: 1px solid $primary-color;
+        background: $primary-color;
+        color: $white;
+
+        &[disablehover=false] {
+
+            &:focus,
+            &:active,
+            &:hover {
+                border-color: $primary-color;
+                background: $white;
+                color: $primary-color;
+            }
+
+            &.outline {
+                border-color: $primary-color;
+                background: $white;
+                color: $primary-color;
+            }
+        }
+
+    }
+
+    &.blue {
+        border: 1px solid $default-blue;
+        background: $default-blue;
+        color: $white;
+
+        &:focus,
+        &:active,
+        &:hover {
+            border-color: $default-blue;
+            background: $white;
+            color: $default-blue;
+        }
+
+        &.outline {
+            border-color: $default-blue;
+            background: $white;
+            color: $default-blue;
+        }
+    }
+
+    &.green {
+        border: 1px solid $default-green;
+        background: $default-green;
+        color: $white;
+
+        &[disablehover=false] {
+
+            &:focus,
+            &:active,
+            &:hover {
+                border-color: $default-green;
+                background: $white;
+                color: $default-green;
+            }
+
+            &.outline {
+                border-color: $default-green;
+                background: $white;
+                color: $default-green;
+            }
+        }
+    }
+
+    &.lavender {
+        border: none;
+        background: $lavender-blue;
+        color: $secondary-color;
+        //     &[disablehover=false]{
+        //     &:focus, &:active, &:hover{
+        //         border-color:  $default-green;
+        //         background: $white;
+        //         color:   $default-green;
+        //     }
+        //     &.outline{
+        //         border-color:  $default-green;
+        //         background: $white;
+        //         color:   $default-green;
+        //     }
+    }
+
+    @media (max-width: 550px) {
+        font-size: 12px;
+    }
+    @media (max-width: 360px) {
+        font-size: 0.6rem;
+      }
+}

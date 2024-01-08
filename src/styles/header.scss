@@ -1,0 +1,84 @@
+.app-header {
+
+    background: transparent;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+        height: 3rem;
+
+        @media (max-width: 550px) {
+            height: 2.5rem;
+        }
+
+        @media (max-width: 360px) {
+            height: 2.2rem;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: inline;
+
+        li {
+            padding: 0 1rem;
+            display: inline;
+
+            a {
+
+                &:hover,
+                &:active,
+                &:focus {
+                    color: $secondary-color;
+                }
+            }
+        }
+    }
+
+    .login-link-container {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+
+        ul {
+            display: flex;
+            justify-content: flex-end;
+
+            //padding: 0.5rem 0 0 0;
+            li {
+                &:last-child {
+                    padding-right: 0;
+                }
+
+                a {
+                    font-size: 0.875rem;
+                }
+            }
+        }
+
+        .search-container {
+            display: inline;
+            padding: 0.5rem 0 0 0;
+
+            input {
+                width: 32rem;
+
+            }
+        }
+
+    }
+}
+
+
+.navblock {
+    background-color: rgba(16, 28, 70, 1);
+}
+
+.page-fixed {
+    position: fixed;
+    z-index: 2;
+}

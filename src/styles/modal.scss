@@ -1,0 +1,42 @@
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+}
+
+.modal-text {
+    color: $secondary-color;
+    background-color: $lavender-blue;
+
+}
+
+.ReactModal__Body--open {
+    overflow: hidden;
+
+}
+
+.ReactModal__Content {
+    width: 40%;
+
+    @media (max-width: 768px) {
+        width: 60%;
+    }
+
+    @media (max-width: 550px) {
+
+        width: 80%;
+    }
+
+    @media (max-width: 360px) {
+
+        width: 90%;
+    }
+}

@@ -1,0 +1,36 @@
+.card {
+    width: auto;
+    height: auto;
+    background: transparent;
+    color: $white;
+    -webkit-box-shadow: 0px 0px 28px 8px rgba(0, 0, 0, 0.20);
+    -moz-box-shadow: 0px 0px 28px 8px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 0px 28px 8px rgba(0, 0, 0, 0.20);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem;
+
+    &.white {
+        background: $default-gray;
+        color: $primary-color;
+    }
+
+    &.green {
+        background: $default-green;
+        color: $white;
+    }
+
+    &.blue {
+        background: $default-blue;
+        color: $white;
+    }
+
+    &.text-left {
+        text-align: left;
+    }
+
+    &.text-right {
+        text-align: right;
+    }
+}

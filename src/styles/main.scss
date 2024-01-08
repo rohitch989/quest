@@ -1,0 +1,612 @@
+$primary-color: #646871;
+$secondary-color: #c81a78;
+$default-green: #62b87e;
+$default-blue: #1898cd;
+$primary-link-color: $secondary-color;
+$hover-color: $primary-color;
+$white: #fff;
+$footer-background: #000;
+$default-gray: #eee;
+$lavender-blue: #aaaafd;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: "Roboto", sans-serif;
+  background: $white;
+  text-align: center;
+  height: 100vh;
+  background: url("https://enterprise-apps.mphasis.com/ess/v1/assets/images/app-bg.jpg") fixed center;
+  background-size: cover;
+}
+
+
+.quest-input {
+  border: 1px solid $secondary-color;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  box-sizing: border-box;
+  background-color: $default-gray;
+}
+
+.quest-input~i {
+  position: absolute;
+  right: 1rem;
+  top: 0.5rem;
+}
+
+
+.input-home {
+  width: 50%;
+  position: relative;
+
+  input {
+    width: 100%;
+    height: 40px;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+
+
+.section-container {
+  width: 100%;
+  padding: 0 5%;
+
+  &.full-height {
+    width: 100%;
+    height: 90.3vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .ask-home {
+    margin: 1rem auto;
+  }
+
+  .section-header {
+    font-size: 1.7rem;
+    color: $lavender-blue;
+    margin: 2rem auto;
+  }
+
+  .home-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+}
+
+.section-holder {
+  background: linear-gradient(#c81a78, #944d9d);
+  width: 100%;
+  height: 220px;
+  padding: 4rem;
+  box-sizing: border-box;
+  font-size: 4rem;
+  color: $white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-section {
+  padding-top: 2rem;
+  display: flex;
+}
+
+.two-column-container {
+  display: grid;
+  grid-template-columns: 20% 78%;
+  column-gap: 2%;
+  box-sizing: border-box;
+  justify-content: space-between;
+  margin-top: 2rem;
+  padding: 0 10%;
+
+  &.no-padding {
+    padding: 0;
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+}
+
+.left-aside {
+  padding-left: 1rem;
+}
+
+.right-aside {
+  padding-right: 1rem;
+}
+
+.top-aside {
+  padding-top: 1rem;
+}
+
+.bottom-aside {
+  padding-bottom: 1rem;
+}
+
+.left-margin-aside {
+  margin-left: 1rem;
+}
+
+.right-margin-aside {
+  margin-right: 1rem;
+
+  @media (max-width: 930px) {
+    margin-right: 0.5rem;
+  }
+
+  @media (max-width: 383px) {
+    margin-right: 0.2rem;
+  }
+
+}
+
+.top-margin-aside {
+  margin-top: 1rem;
+}
+
+.bottom-margin-aside {
+  margin-bottom: 1rem;
+}
+
+.blur_content {
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.element_remove {
+  display: none
+}
+
+.error-red {
+  color: red;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  font-stretch: extra-condensed;
+  font-weight: bold;
+
+  &.blue {
+
+    background-color: $lavender-blue;
+  }
+
+}
+
+.suceess-green {
+  color: $default-green;
+  font-size: 14px;
+  font-family: "Courier New", Courier, monospace;
+  font-stretch: extra-condensed;
+  font-weight: bold;
+}
+
+@import "./header.scss";
+@import "./common.scss";
+@import "./card.scss";
+@import "./footer.scss";
+@import "./button.scss";
+@import "./chips.scss";
+@import "./sideNav.scss";
+@import url(./suggestinput.scss);
+@import url(./text_tinymce.scss);
+@import "./modal.scss";
+@import "bootstrap-icons/font/bootstrap-icons.css";
+@import "./tag.scss";
+// questionDetail
+
+.question-details-container {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 2%;
+  margin: 4rem 0;
+  margin-top: 8rem;
+
+  .question-detail-panel {
+    margin-top: 0.8rem;
+    width: 80%;
+    color: #E1D9D1;
+
+  }
+}
+
+.relative-content {
+  position: relative;
+}
+
+.resultListHeader {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $primary-color;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .detail {
+
+
+    h2 {
+      padding: 0;
+      margin: 0;
+    }
+
+    p {
+      padding: 1rem 0 0 0;
+
+      .moment {
+        display: inline-block;
+        padding: 0.5rem 0rem;
+
+        span:first-of-type {
+          color: $default-blue;
+          font-weight: bold;
+          font-style: italic;
+        }
+
+        strong {
+          font-size: 0.85rem;
+        }
+
+        .chips {
+          font-size: 0.85rem;
+        }
+
+
+        @media (max-width: 550px) {
+          padding: 0.2rem 0rem;
+        }
+
+      }
+
+      strong {
+        padding: 0 1rem 0 0.25rem;
+      }
+
+      @media (max-width: 550px) {
+        padding: 0.2rem 0 0 0;
+      }
+    }
+  }
+
+  .content {
+    display: flex;
+
+    align-items: center;
+    justify-content: flex-end;
+
+    a {
+      color: $default-blue;
+    }
+
+    button {
+      margin-left: 1rem;
+    }
+
+  }
+}
+
+.resultList {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid $primary-color;
+  display: flex;
+
+  .detail {
+    border-right: 1px solid $primary-color;
+    padding-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 1.5rem;
+    align-items: center;
+    min-width: 4rem;
+
+    p {
+      margin: 1rem 0;
+    }
+
+    @media (max-width: 900px) {
+      min-width: 5rem;
+    }
+
+    @media (max-width: 550px) {
+      min-width: 4rem;
+    }
+
+    @media (max-width: 360px) {
+      min-width: 2.8rem;
+      padding-right: 0.5rem;
+    }
+  }
+
+  .content {
+    padding-left: 1rem;
+    padding-top: 1rem;
+    flex-wrap: wrap;
+    word-break: break-all;
+
+    h2 {
+      color: $default-blue;
+    }
+
+    .chips {
+      margin: 0.5rem;
+    }
+  }
+}
+
+.content-aside {
+  position: absolute;
+  width: 30%;
+  right: -5%;
+
+  .card {
+
+    i {
+      color: $default-green;
+      margin: 10px;
+      position: absolute;
+      left: -17%;
+    }
+
+    h4 {
+      margin: 0;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+    }
+
+    p {
+      text-align: left;
+      margin: 0.5rem 0;
+      font-size: 0.9rem;
+
+      @media (max-width: 550px) {
+        font-size: 12px;
+      }
+
+    }
+  }
+
+  .card:first-child {
+    margin-top: 0;
+  }
+
+  @media (max-width: 930px) {
+    position: static;
+
+  }
+
+  @media (max-width: 930px) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 2rem auto;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 2rem 0;
+    }
+  }
+}
+
+
+
+// Post Question
+
+
+
+.post-form-container {
+  margin-top: 4rem;
+
+  ul {
+    list-style: disc;
+    padding: 0 0 0 2rem;
+  }
+
+  input[type="text"] {
+    display: block;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 0.6rem;
+
+    .card {
+      margin: 2rem 1rem;
+    }
+  }
+
+  @media (max-width: 289px) {
+
+    .card {
+      margin: 2rem 0.5rem;
+    }
+  }
+}
+
+
+
+.comment-section {
+  margin: 1rem 0 0 0;
+  width: 100%;
+  border-top: 1px solid $default-gray;
+  padding: 1rem 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+
+
+  .comment {
+    width: 100%;
+
+    p {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      word-break: break-all;
+
+      .vote {
+        color: $secondary-color;
+        min-width: 3rem;
+        padding: 0 1rem 0 0;
+      }
+
+    }
+
+
+    a {
+      padding: 0 0.5rem;
+      color: $default-blue;
+
+    }
+
+    span {
+      color: $primary-color;
+    }
+  }
+}
+
+.anonymous {
+  color: $primary-color;
+}
+
+.author-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+
+  .author {
+
+
+    img {
+      max-width: 2.5rem;
+
+      @media (max-width: 550px) {
+        max-width: 2rem;
+      }
+    }
+
+    @media (max-width: 300px) {
+      align-self: flex-end;
+    }
+
+    a {
+      padding: 0rem;
+      color: $default-green;
+      font-weight: 400;
+    }
+
+    display: flex;
+    align-items: center;
+
+    ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+
+      li {
+        display: inline;
+        padding: 0 0.5rem 0 0;
+        font-size: 0.875rem;
+        color: $primary-color;
+
+        @media (max-width: 550px) {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 300px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.reply-input {
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+
+  .form-button {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.8rem 0;
+
+  }
+
+  input {
+    width: 100%;
+  }
+
+  label {
+    input {
+      width: 15px;
+    }
+
+  }
+}
+
+//Form
+.formQuestion-flag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 0.8rem;
+  margin: 1rem;
+
+  label {
+    cursor: pointer;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 12px;
+  }
+
+  @media (max-width: 300px) {
+    margin: 1rem 0;
+  }
+}
+
+.questionForm-button {
+  margin: 3rem;
+}
+
+.questionDetail-postAnswer {
+  .postAnswer-button {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+  }
+}
+
+.comment-deleted {
+  text-align: center;
+  background-color: $secondary-color;
+  color: $white;
+  border-radius: 4px;
+}

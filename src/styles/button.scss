@@ -1,0 +1,153 @@
+.quest-button {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.2s all ease;
+
+    &.secondary {
+        background: $secondary-color;
+        border: 1px solid $secondary-color;
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: $white;
+            color: $secondary-color;
+        }
+
+        &:disabled {
+            background: $white;
+            color: $secondary-color;
+            cursor: text;
+        }
+    }
+
+    &.green {
+        background: $default-green;
+        border: 1px solid $default-green;
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: $white;
+            color: $default-green;
+        }
+
+        &:disabled {
+            background: $white;
+            color: $default-green;
+            cursor: text;
+        }
+
+    }
+
+    &.blue {
+        background: $default-blue;
+        border: 1px solid $default-blue;
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: $white;
+            color: $default-blue;
+        }
+
+        &:disabled {
+            background: $white;
+            color: $default-blue;
+            cursor: text;
+        }
+
+    }
+
+    &.dark {
+        background: $footer-background;
+        border: 1px solid $footer-background;
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: $white;
+            color: $footer-background;
+        }
+
+        &:disabled {
+            background: $white;
+            color: $footer-background;
+            cursor: text;
+        }
+
+    }
+
+    &.primary {
+        background: $primary-color;
+        border: 1px solid $primary-color;
+        color: $white;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: $white;
+            color: $primary-color;
+        }
+
+        &:disabled {
+            background: $white;
+            color: $primary-color;
+            cursor: text;
+        }
+
+    }
+
+    &.icons {
+        color: $lavender-blue;
+        border: none;
+        background: transparent;
+        font-size: 1rem;
+
+        &:hover,
+        &:focus,
+        &:active {
+            color: $default-gray;
+            font-size: 1.2rem;
+
+            @media (max-width: 360px) {
+                font-size: 0.7rem;
+            }
+        }
+
+        &:disabled {
+            background: $white;
+            color: $primary-color;
+            cursor: text;
+        }
+
+        @media (max-width: 930px) {
+            padding: 0.5rem;
+        }
+
+        @media (max-width: 383px) {
+            padding: 0.2rem;
+        }
+
+        @media (max-width: 550px) {
+            font-size: 12px;
+        }
+
+        @media (max-width: 360px) {
+            font-size: 0.6rem;
+        }
+    }
+
+    @media (max-width: 550px) {
+        font-size: 12px;
+    }
+
+    @media (max-width: 360px) {
+        font-size: 0.6rem;
+        padding: 0.2rem 0.6rem;
+    }
+}

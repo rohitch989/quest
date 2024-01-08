@@ -1,0 +1,24 @@
+.tox {
+  margin: 10px auto;
+
+}
+
+.tox.tox-tinymce.focused {
+  border: 1px solid #c81a78;
+}
+
+.richText-wrapper {
+  border: 1px solid lightgray;
+  margin: 5px;
+}
+
+.richText-editor {
+  border: 1px solid lightgray;
+  min-height: 200px;
+
+}
+
+.richText-toolbar {
+  background-color: transparent !important;
+  color: black;
+}

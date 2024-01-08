@@ -1,0 +1,117 @@
+.side-nav {
+    min-width: 220px;
+    margin: 0rem 0;
+    border-radius: 1rem;
+    height: max-content;
+    background-color: $default-gray;
+    padding: 0rem 0rem 10rem 0rem;
+
+    @media (max-width: 550px) {
+        font-size: 12px;
+        padding: 0rem 0rem 5rem 0rem;
+        min-width: 180px
+    }
+
+    @media (max-width: 360px) {
+        font-size: 0.6rem;
+    }
+
+    ul {
+        li {
+            &:first-child {
+                a {
+                    border-top-left-radius: 1rem;
+                    border-top-right-radius: 1rem;
+
+                }
+            }
+
+            a {
+                padding: 1rem;
+                display: block;
+                margin: 0;
+
+                &:hover,
+                &:active,
+                &:focus,
+                &.selected {
+                    background: $secondary-color;
+                    color: $white;
+                }
+            }
+
+            ul {
+                margin: 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        position: absolute;
+        z-index: 1;
+        background-color: $white;
+        left: -100%;
+        transition: left 499ms ease;
+    }
+}
+
+
+
+#sidebar_toggle_check {
+    display: none;
+
+    &:checked~.sidebar_toggle>.bi-arrow-bar-left {
+        display: inline-block;
+    }
+
+    &:checked~.sidebar_toggle>.bi-arrow-bar-right {
+        display: none;
+    }
+
+    &:checked~.side-nav {
+        left: 5%;
+    }
+
+    &:checked~.sidebar_toggle {
+        left: 1%;
+    }
+}
+
+.sidebar_toggle {
+    display: none;
+    align-items: center;
+    height: fit-content;
+    font-size: 1rem;
+    cursor: pointer;
+    border: 1px solid $secondary-color;
+    border-radius: 4px;
+    color: $secondary-color;
+    background-color: $default-gray;
+    transition: all 499ms ease;
+
+    &:hover,
+    &:active {
+
+        background-color: $secondary-color;
+        border: 1px solid $white;
+        color: $white;
+
+
+
+    }
+
+    i {
+        font-size: 1.6rem;
+    }
+
+    .bi-arrow-bar-left {
+        display: none;
+    }
+
+    @media (max-width: 1200px) {
+        display: flex;
+        position: absolute;
+        z-index: 1;
+        left: 3%;
+    }
+}
